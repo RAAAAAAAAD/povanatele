@@ -1,0 +1,18 @@
+<div class="container">
+  <h2>Accedi</h2>
+  <div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" [(ngModel)]="email" name="email" required>
+  </div>
+
+  <div>
+    <label for="password">Password:</label>
+    <input type="password" id="password" [(ngModel)]="password" name="password" required>
+  </div>
+
+  <p *ngIf="errorMessage" style="color: red;">{{ errorMessage }}</p>
+
+  <button (click)="login()">Accedi</button>
+  
+  <p>Non hai un account? <a (click)="goToRegister()" style="cursor: pointer; color: blue;">Registrati</a></p>
+</div>
